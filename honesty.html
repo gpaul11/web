@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="center, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: #1a52f9;
+    background-image: linear-gradient(19deg, #1a52f9 0%, #B721FF 84%);
+    /* position: relative; */
+}
+
+
+nav{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* position: absolute;   */
+}
+
+.logo a{
+    
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.menu ul li a{
+    text-transform: capitalize;
+}
+
+.active, ul li:hover{
+    border-top: 2px solid #5dade2;
+    border-bottom: 2px solid #5dade2;
+}
+
+.contact_btn a{
+    background-color: #d465ef;
+    padding: 12px 26px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+}
+
+.contact_btn a:hover{
+    background: linear-gradient(to bottom, #615cfd 0%, #d465ef 100%);
+}
+
+.center_heading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.center_heading h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.center_heading p{
+    font-size: 16px;
+    color: rgb(248, 242, 242);
+    text-align: justify;
+    /* margin-left: 10px; */
+}
+
+
+.social_icons{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    right: 0px;
+    top: 40%;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:linear-gradient(to bottom, #615cfd 0%, #d465ef 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon:hover{
+    background: linear-gradient(to bottom, #d465ef 0%, #615cfd 100%) ;
+}
+
+.icon:nth-child(even){
+    margin: 10px 0;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Assignment</a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="honesty.html" class="active">Honestly</a></li>
+                    <li><a href="index.html">Main</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+
+                </ul>
+            </div>
+            <div class="contact_btn">
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+        <div class="center_heading">
+            <h1>Gunjan Kaur Paul</h1>
+ <p>“I declare that my Final assessment assignment is wholly my own work in accordance with Seneca Academic Policy. No part of this assignment has been copied manually or electronically from any other source (including web sites) except for the information supplied by the WEB222 Professor and / or made available in this assignment for my use. I also declare that no part of this assignment has been distributed to other students.”<br>
+ <br><br>
+ Name: Gunjan Kaur Paul <br>
+ Student Id: 156409211 <br>
+ Dated: 18 August, 2022</p>
+        </div>
+        <div class="social_icons">
+            <div class="icon">
+                <i class="fa fa-github" aria-hidden="true"></i>
+            </div>
+            <div class="icon">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </div>
+            <div class="icon">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </div>
+            <div class="icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+        </div>
+        
+    </header>
+</body>
+</html>

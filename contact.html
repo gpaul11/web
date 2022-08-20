@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* ///////////////////Body///////////////// */
+    body {
+      background-color: #1a52f9;
+      background-image: linear-gradient(19deg, #1a52f9 0%, #B721FF 84%);
+      font-family: 'Mulish', sans-serif;
+    }
+
+    body h3 {
+      color: white;
+    }
+
+    /* ///////////////////Nav Bar///////////////// */
+    nav {
+      width: 100%;
+      height: 15vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      /* position: absolute;   */
+    }
+
+    .logo a {
+
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      color: wheat;
+    }
+
+    .menu ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 0 15px;
+      font-size: 17px;
+    }
+
+    .menu ul li a {
+      text-transform: capitalize;
+      color: white;
+      text-decoration: none;
+    }
+
+    .active,
+    ul li:hover {
+      border-top: 2px solid #5dade2;
+      border-bottom: 2px solid #5dade2;
+    }
+
+    /* ///////////////////Contact form///////////////// */
+    input[type=text],
+    input[type=email],
+    input[type=number],
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid rgb(171, 164, 164);
+      align-items: center;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+      padding: 12px;
+      margin-bottom: 16px;
+      margin-top: 6px;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #0e21f1;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #04ffff;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <tr>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">Contact Me</a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="honesty.html" class="active">Honestly</a></li>
+          <li><a href="index.html">Main</a></li>
+          <li><a href="resume.html">Resume</a></li>
+
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <form action="https://formspree.io/f/mgeqejgj" method="post" id="MyForm">
+        <label for="name" style="margin-top:0.2vw">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name"><br>
+
+        <label for="Email">Email Adress </label>
+        <input type="email" id="email" name="email" placeholder="Email"><br>
+
+        <label for="address">Address</label>
+        <input id="address" type="text" name="address" placeholder="Address"><br>
+        <label for="city">City</label>
+        <input id="city" type="text" name="city" placeholder="city">
+        <br>
+        <input id="postalCode" type="text"
+          pattern="[ABCEGHJ-NPRSTVXY]{1}[0-9]{1}[ABCEGHJ-NPRSTV-Z]{1}[ ]?[0-9]{1}[ABCEGHJ-NPRSTV-Z]{1}[0-9]{1}"
+          placeholder="Canadian Postal Code" required>
+        <br>
+        <input type="radio" id="html" name="raio" value="Hiring">
+        <label for="html"> <b>Hiring</b> </label><br>
+        <input type="radio" id="css" name="raio" value="Ques">
+        <label for="css"><b>Question</b> </label><br>
+        <input type="radio" id="javascript" name="raio" value="Com">
+        <label for="javascript"> <b>Comment</b> </label>
+        <div style="display:none;" id="hiring">
+          <input type="number" name="hiring-rate" min="0" placeholder="Hourly rate" />
+          <br>
+        </div>
+        <div style="display:none;" id="com">
+          <br>
+          <textarea class="comment" rows="5" cols="50" name="comment" placeholder="Comment us"></textarea>
+          <br>
+        </div>
+        <input style="margin-bottom:1vw;" type="submit" value="Submit">
+  </tr>
+  </table>
+  </div>
+  <script>
+
+
+    buttons = document.querySelectorAll("input[type='radio']");
+    buttons.forEach(button => {
+      button.onclick = () => {
+        if (button.value == 'Hiring') {
+          document.querySelector("#hiring").style = "display:block;"
+          document.querySelector("#com").style = "display:none;"
+        }
+        else {
+          document.querySelector("#hiring").style = "display:none;"
+          document.querySelector("#com").style = "display:block;"
+
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
